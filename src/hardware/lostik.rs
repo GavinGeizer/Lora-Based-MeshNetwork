@@ -214,7 +214,7 @@ impl LoStik {
             "radio get bw",
             "radio get cr",
             "radio get wdt",
-            "radio set pwr 20",
+            "radio set pwr 22",/// 22dbm + 7.9999999...Gain = 30dbm
             "radio set sf sf12",
             "radio set bw 125",
             "radio set cr 4/5",
