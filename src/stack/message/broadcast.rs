@@ -1,8 +1,11 @@
+use lz4_flex::block::{compress_prepend_size, decompress_size_prepended};
 use std::net::Ipv4Addr;
 use crate::stack::Frame;
 use crate::stack::frame::{FrameHeader, ToFromFrame};
 use crate::stack::util::{parse_bool, parse_ipv4, parse_byte};
 use crate::message::MessageType;
+use lz4::{Decoder, EncoderBuilder};
+
 
 /// Broadcast this node to nearby devices.
 #[derive(Clone)]
@@ -106,4 +109,12 @@ fn broadcast_tofrom_frame() {
     assert_eq!(msg2.header.unwrap().sender(), id);
     assert_eq!(msg2.isgateway, isgateway);
     assert_eq!(msg2.ipaddr.unwrap(), msg.ipaddr.unwrap());
+}
+
+#[test]
+fn lz4test(){
+    let input: &[u8] = b"Hello people, what's up?";
+    let compressed = compress_prepend_size(input);
+    let uncompressed = decompress_size_prepended(&compressed).unwrap();
+    assert_eq!(input, uncompressed);
 }

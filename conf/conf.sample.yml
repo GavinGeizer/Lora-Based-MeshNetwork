@@ -1,7 +1,7 @@
 nodeid: 0
-debug: false
+debug: true
 isgateway: false
 radioport: "/dev/ttyUSB0"
 maxpacketsize: 200
 chunktimeout: 10000
-maxhops: 2
+maxhops: 8
