@@ -8,8 +8,8 @@ edition = "2018"
 
 [dependencies]
 config = "0.10.1"
-crossbeam = "0.7.3"
-crossbeam-channel = "0.3.9"
+crossbeam = "1.36.0"
+crossbeam-channel = "0.5.12"
 enumn = "0.1.2"
 format_escape_default = "0.1.1"
 hex = "0.4.0"
