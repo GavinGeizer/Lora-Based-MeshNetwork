@@ -2,9 +2,9 @@
 
 ![](https://github.com/crockpotveggies/lora-mesh-rs/workflows/LoRa%20Mesh%20Tests/badge.svg)
 
-LoRa has opened up a realm of possibilities for IoT and transmission of digital signals 
-across long ranges. Currently it's very difficult to find open source mesh networking for LoRa that 
-support IPv4 and application data. This project aims to provide a simple mesh network for LoRa devices 
+LoRa has opened up a realm of possibilities for IoT and the transmission of digital signals 
+across long ranges. Currently, it's very difficult to find open-source mesh networking for LoRa that 
+supports IPv4 and application data. This project aims to provide a simple mesh network for LoRa devices 
 that route IP traffic to a local interface, built entirely using [Rust](https://rust-lang.org/).
 
 This is quite useful if you want to set up a network of devices and manage them remotely or use existing 
@@ -12,7 +12,7 @@ IP protocols to interact with your applications.
 
 The mesh only supports 256 nodes, with expanded capacity on the roadmap. The mesh software  works out-of-the-box with [LoStik](https://ronoth.com/products/lostik).
 
-This software is **not ready for production-use yet**.
+This software is **not ready for production use yet**.
 
 ## Running
 
@@ -73,7 +73,7 @@ Gateways currently do not save their state, this could be an issue for unreliabl
 - [ ] Multiple LoRa device hardware
 - [ ] Security and encryption (WIP)
 - [ ] Support 65,536 nodes (WIP)
-
+- [ ] Add Support for IPv6 Devices and Networks
 
 ## Credits
 
