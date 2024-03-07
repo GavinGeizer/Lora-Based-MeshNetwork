@@ -1,6 +1,6 @@
 # LoRa Mesh
 
-![](https://github.com/crockpotveggies/lora-mesh-rs/workflows/LoRa%20Mesh%20Tests/badge.svg)
+![](https://github.com/computerjesus/lora-mesh-rs/workflows/LoRa%20Mesh%20Tests/badge.svg)
 
 LoRa has opened up a realm of possibilities for IoT and the transmission of digital signals 
 across long ranges. Currently, it's very difficult to find open-source mesh networking for LoRa that 
