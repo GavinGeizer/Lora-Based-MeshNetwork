@@ -68,11 +68,11 @@ Gateways currently do not save their state, this could be an issue for unreliabl
 - [x] Gateway DHCP
 - [x] Multi-hop routing
 - [ ] Network failure recovery
-- [ ] Frame [lz4](https://docs.rs/crate/lz4-compress/0.1.1/source/src/compress.rs) compression
+- [ ] Frame [lz4](https://docs.rs/crate/lz4-compress/0.1.1/source/src/compress.rs) compression (WIP)
 - [ ] RTS/CTS collision prevention
 - [ ] Multiple LoRa device hardware
-- [ ] Security and encryption
-- [ ] Support 65,536 nodes
+- [ ] Security and encryption (WIP)
+- [ ] Support 65,536 nodes (WIP)
 
 
 ## Credits
