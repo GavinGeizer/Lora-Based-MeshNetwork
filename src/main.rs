@@ -35,8 +35,10 @@ fn main() {
         WriteLogger::init(LevelFilter::Info, Config::default(), io::stderr()).expect("Failed to init log");
     }
     info!("LoRa Mesh starting...");
+    
+    //this part is not needed because opt.nodeid's limit is already 255
+    //assert!(opt.nodeid <= 255, "Invalid node ID specified, it must be 255 or less.");
 
-    assert!(opt.nodeid <= 255, "Invalid node ID specified, it must be 255 or less.");
     info!("Node ID is {}", opt.nodeid);
     let iface = Arc::new(Iface::new(TUN_DEFAULT_PREFIX, Mode::Tun).unwrap());
     let tun = NetworkTunnel::new(iface);
