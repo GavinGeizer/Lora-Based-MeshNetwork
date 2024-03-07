@@ -2,8 +2,8 @@ use log::*;
 use std::process::Command;
 use std::thread;
 extern crate tun_tap;
-use tun_tap::{Iface, Mode};
-use crate::TUN_DEFAULT_PREFIX;
+use tun_tap::{Iface};
+
 use std::net::Ipv4Addr;
 use crossbeam_channel;
 use crossbeam_channel::{Receiver, Sender};
@@ -41,7 +41,7 @@ impl NetworkTunnel {
     pub fn new(iface: Arc<Iface>) -> Self {
         trace!("Iface: {:?}", iface);
 
-        let tunname = String::from(iface.name().clone());
+        let tunname = String::from(iface.name());
 
         // Configure the local kernel interface with a kernel
         // IP and we will route and capture traffic through it
