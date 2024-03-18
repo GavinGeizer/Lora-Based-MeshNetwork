@@ -8,17 +8,17 @@ use packet::ip::v4::Packet;
 use ratelimit_meter::{DirectRateLimiter, LeakyBucket};
 use crossbeam_channel::Sender;
 use std::borrow::{BorrowMut};
-use hex;
-use crate::stack::tun::{ipassign, iproute};
+
+
 use std::collections::HashMap;
 use crate::stack::frame::recombine_chunks;
-use std::thread::sleep;
+
 use rand::{thread_rng, Rng};
 use rand::prelude::ThreadRng;
 use util::composite_key;
-use std::intrinsics::transmute;
+
 use crate::settings::Settings;
-use crossbeam_channel::internal::SelectHandle;
+
 
 pub struct MeshNode {
     /// The ID of this node
@@ -360,7 +360,7 @@ impl MeshNode {
     /// Handle routing of an IP packet from radio
     /// checks if packet was destined for this node or if
     /// it should be passed to the next hop
-    fn handle_radio_ip(&mut self, packet: Packet<Vec<u8>>, mut frame: Frame, txsender: &Sender<Vec<u8>>) {
+    fn handle_radio_ip(&mut self, packet: Packet<Vec<u8>>, frame: Frame, txsender: &Sender<Vec<u8>>) {
         // apply routing logic
         // was this packet meant for us? if not, drop
         match self.ipaddr {
