@@ -1,5 +1,6 @@
 {
-    "yaml.schemas": {
-        "https://gitpod.io/schemas/gitpod-schema.json": "file:///workspace/lora-mesh-rs/.gitpod.yml"
-    }
+  "yaml.schemas": {
+    "https://gitpod.io/schemas/gitpod-schema.json": "file:///workspace/lora-mesh-rs/.gitpod.yml"
+  },
+  "C_Cpp_Runner.msvcBatchPath": ""
 }
