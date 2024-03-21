@@ -1129,6 +1129,7 @@ dependencies = [
  "log",
  "lz4",
  "lz4_flex",
+ "network-interface",
  "nonzero_ext 0.2.0",
  "packet",
  "petgraph",
@@ -1309,6 +1310,18 @@ checksum = "b13b648036a2339d06de780866fbdfda0dde886de7b3af2ddeba8b14f4ee34ac"
 dependencies = [
  "cfg-if 0.1.10",
  "libc",
+ "winapi 0.3.9",
+]
+
+[[package]]
+name = "network-interface"
+version = "1.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0d68759ef97fe9c9e46f79ea8736c19f1d28992e24c8dc8ce86752918bfeaae7"
+dependencies = [
+ "cc",
+ "libc",
+ "thiserror",
  "winapi 0.3.9",
 ]
 

@@ -9,7 +9,7 @@ pub struct Settings {
     between 1 and 255 otherwise the node will enter local test mode. It is recommended
     you set the gateway as 1. */
     pub nodeid: u8,
-
+    pub nodeid_2: u8
     /// Activate debug mode
     // short and long flags (-d, --debug) will be deduced from the field's name
     pub debug: bool,
@@ -45,13 +45,13 @@ impl Settings {
         let mut settings = config::Config::default();
         settings.set_default("nodeid", 0);
         settings.set_default("debug", false);
-        settings.set_default("isgateway", false);
+        settings.set_default("isgateway", true);
         settings.set_default("radioport", "/dev/ttyUSB0");
         settings.set_default::<Option<&str>>("radiocfg", None);
         settings.set_default("maxpacketsize", 200);
         settings.set_default("txslot", 1000);
         settings.set_default("chunktimeout", 10000);
-        settings.set_default("maxhops", 2);
+        settings.set_default("maxhops", 8);
 
 
         // local user settings file

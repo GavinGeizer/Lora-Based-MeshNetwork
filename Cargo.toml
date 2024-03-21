@@ -20,6 +20,7 @@ hex = "0.4.0"
 log = "0.4"
 lz4 = "1.24.0"
 lz4_flex = "0.11.2"
+network-interface = "1.1.1"
 nonzero_ext = "0.2.0"
 packet = "0.1.2"
 petgraph = "0.5.0"
@@ -29,4 +30,6 @@ ratelimit_meter = "5.0.0"
 serde = { version = "1.0", features = ["derive"] }
 serialport = "3.3.0"
 simplelog = {version = "^0.7.4", default-features = false}
-tun-tap = "0.1.2"
+tun-tap = "0.1.4"
+
+[dev-dependencies]
